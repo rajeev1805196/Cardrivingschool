@@ -1,21 +1,15 @@
-import Image from 'next/image'
-import 'bootstrap/dist/css/bootstrap.css'
-import "../public/assets/css/style.css"
-import Dashboard from './dashboard'
-import Listing from './listing'
+
+import { Container } from 'react-bootstrap';
+import Home from './home'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Header from './header';
+import '../public/assets/css/style.css'
 export default function Pages() {
   return (
-    <main className="main-wrapper">
-            {/* <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            /> */}
-      <Dashboard/>
-      <Listing />
-    </main>
+    <Container fluid>
+      <Header/>
+      <Home />
+    </Container>
+
   )
 }
