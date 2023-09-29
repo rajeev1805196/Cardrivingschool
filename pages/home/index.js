@@ -1,4 +1,7 @@
+import Customerslist from "../component/Customerslist"
+import CarListing from "../component/carlist"
 import Howtowork from "../component/howtowork"
+import Footer from "../footer"
 import Search from "../search"
 
 export default function Home() {
@@ -33,7 +36,11 @@ export default function Home() {
            
         </section>
         <Search/>
+        {/* <Cartypes/> */}
         <Howtowork/>
+        <CarListing/>
+        <Customerslist/>
+        <Footer/>
       </>
     )
   }
