@@ -6,6 +6,8 @@ import "../../public/assets/css/style.css"
 // import OwlCarousel from '@ntegral/react-owl-carousel';
 // import 'owl.carousel/dist/assets/owl.carousel.css';
 // import 'owl.carousel/dist/assets/owl.theme.default.css';
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import { Carousel } from 'react-responsive-carousel';
 export default function Listing() {
   return (
     <>
@@ -140,7 +142,39 @@ export default function Listing() {
               </div>
           </div>
         </div>
-
+        {/* <OwlCarousel
+            className="owl-theme"
+            loop
+            margin={10}
+            nav
+        >
+            <div class="item"><h4>1</h4></div>
+            <div class="item"><h4>2</h4></div>
+            <div class="item"><h4>3</h4></div>
+            <div class="item"><h4>4</h4></div>
+            <div class="item"><h4>5</h4></div>
+            <div class="item"><h4>6</h4></div>
+            <div class="item"><h4>7</h4></div>
+            <div class="item"><h4>8</h4></div>
+            <div class="item"><h4>9</h4></div>
+            <div class="item"><h4>10</h4></div>
+            <div class="item"><h4>11</h4></div>
+            <div class="item"><h4>12</h4></div>
+        </OwlCarousel> */}
+        <Carousel>
+                <div>
+                    <img src="assets/1.jpeg" />
+                    <p className="legend">Legend 1</p>
+                </div>
+                <div>
+                    <img src="assets/2.jpeg" />
+                    <p className="legend">Legend 2</p>
+                </div>
+                <div>
+                    <img src="assets/3.jpeg" />
+                    <p className="legend">Legend 3</p>
+                </div>
+            </Carousel>
 
         <section className="product-detail-head">
             <div className="container">
@@ -185,6 +219,7 @@ export default function Listing() {
                     <div className="col-lg-8">
                         <div className="detail-product">
                             <div className="slider detail-bigimg">
+                            <Carousel>
                                 <div className="product-img">
                                     <img src="assets/img/cars/slider-01.jpg" alt="Slider"/>
                                 </div>
@@ -200,14 +235,15 @@ export default function Listing() {
                                 <div className="product-img">
                                     <img src="assets/img/cars/slider-05.jpg" alt="Slider"/>
                                 </div>
+                              </Carousel>
                             </div>
-                            <div className="slider slider-nav-thumbnails">
+                            {/* <div className="slider slider-nav-thumbnails">
                                 <div><img src="assets/img/cars/slider-thum-01.jpg" alt="product image" /></div>
                                 <div><img src="assets/img/cars/slider-thum-02.jpg" alt="product image"/></div>
                                 <div><img src="assets/img/cars/slider-thum-03.jpg" alt="product image"/></div>
                                 <div><img src="assets/img/cars/slider-thum-04.jpg" alt="product image"/></div>
                                 <div><img src="assets/img/cars/slider-thum-05.jpg" alt="product image"/></div>
-                            </div>
+                            </div> */}
                         </div>
                         <div className="review-sec extra-service">
                             <div className="review-header">
@@ -814,6 +850,7 @@ export default function Listing() {
                                 <h3>You May be Interested in</h3>
                             </div>
                             <div className="car-details-slider owl-carousel">
+                              <Carousel showArrows={false} dynamicHeight={true}>
                                 <div className="card">
                                     <div className="listing-item pb-0">
                                         <div className="listing-img">
@@ -1462,6 +1499,7 @@ export default function Listing() {
                                         </div>
                                     </div>
                                 </div>
+                              </Carousel>
                             </div>
                         </div>
                     </div>
